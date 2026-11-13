@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login — Sri Ramakrishna Offset</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo-icon">SRO</div>
+                <div>
+                    <span class="brand-title">Sri Ramakrishna Offset</span>
+                    <span class="brand-subtitle">Commercial Book Manufacturing & Offset Printing</span>
+                </div>
+            </a>
+            <nav class="nav-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">&larr; Customer Website</a></li>
+                </ul>
+                <div class="nav-auth-buttons">
+                    <a href="manager-login.html" class="nav-btn-outline">Manager Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-icon-badge login-badge-admin">📊</div>
+                <h2>Admin Overview Login</h2>
+                <p>Sign in with your administrative credentials to access organizational KPIs and reports.</p>
+            </div>
+
+            <!-- Error Feedback Box -->
+            <div id="loginAlert" class="alert-box"></div>
+
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">Admin Username <span class="required">*</span></label>
+                    <input type="text" id="username" name="username" placeholder="e.g. admin" required autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="loginBtn" style="margin-top: 0.5rem;">
+                    Sign In as Admin
+                </button>
+            </form>
+
+            <div class="login-footer-links">
+                Looking for plant operations? <a href="manager-login.html">Switch to Manager Login &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <strong>Sri Ramakrishna Offset</strong> — Executive Administration
+            </div>
+            <div>
+                Academic FSD Project &copy; 2026
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/admin-login.js"></script>
+</body>
+</html>

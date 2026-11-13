@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Overview — Sri Ramakrishna Offset</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo-icon">SRO</div>
+                <div>
+                    <span class="brand-title">Sri Ramakrishna Offset</span>
+                    <span class="brand-subtitle">Executive Administrative Overview</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">&larr; Customer Website</a></li>
+                    <li><a href="admin.html" class="nav-link active">Admin Overview</a></li>
+                    <li>
+                        <div class="nav-user-pill">
+                            <span>👤 <strong id="loggedInUser">admin</strong></span>
+                            <button id="logoutBtn" class="btn-logout" title="Sign out of admin portal">Logout</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Top Operations Bar -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.75rem;">
+            <div>
+                <h1 style="font-size:1.75rem; color:var(--primary-color); font-weight:800;">Executive Administrative Overview</h1>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Key manufacturing volume metrics and live production summaries from MySQL.</p>
+            </div>
+            <div>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.88rem;" id="refreshAdminBtn">
+                    🔄 Refresh Metrics
+                </button>
+            </div>
+        </div>
+
+        <!-- 3 Summary Metrics Cards -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon icon-blue">📦</div>
+                <div class="stat-info">
+                    <h4>Total Orders Placed</h4>
+                    <div class="stat-number" id="statTotalOrders">--</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-amber">⚙️</div>
+                <div class="stat-info">
+                    <h4>Orders In Progress</h4>
+                    <div class="stat-number" id="statInProgress">--</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-green">✅</div>
+                <div class="stat-info">
+                    <h4>Completed Orders</h4>
+                    <div class="stat-number" id="statCompleted">--</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <div class="table-card">
+            <div class="table-toolbar">
+                <div>
+                    <h2 class="card-title" style="margin-bottom: 0.2rem;">Recent Manufacturing Orders</h2>
+                    <p class="card-subtitle" style="margin-bottom: 0;">Live order status tracking aggregated from the MySQL orders database.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order #</th>
+                        <th>Customer Name</th>
+                        <th>Book Title</th>
+                        <th>Copies</th>
+                        <th>Pages</th>
+                        <th>Date Received</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="recentOrdersBody">
+                    <tr>
+                        <td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                            Loading recent order metrics from MySQL database...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <strong>Sri Ramakrishna Offset</strong> — Executive Overview
+            </div>
+            <div>
+                Academic FSD Project &copy; 2026
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

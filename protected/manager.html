@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard — Sri Ramakrishna Offset</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo-icon">SRO</div>
+                <div>
+                    <span class="brand-title">Sri Ramakrishna Offset</span>
+                    <span class="brand-subtitle">Production Operations Management</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">&larr; Customer Website</a></li>
+                    <li><a href="manager.html" class="nav-link active">Manager Dashboard</a></li>
+                    <li>
+                        <div class="nav-user-pill">
+                            <span>👤 <strong id="loggedInUser">manager</strong></span>
+                            <button id="logoutBtn" class="btn-logout" title="Sign out of manager portal">Logout</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Top Operations Bar -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.75rem;">
+            <div>
+                <h1 style="font-size:1.75rem; color:var(--primary-color); font-weight:800;">Production Operations Dashboard</h1>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Monitor plant queue, view binding specifications, and transition order stages.</p>
+            </div>
+            <div>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.88rem;" id="refreshBtn">
+                    🔄 Refresh Orders
+                </button>
+            </div>
+        </div>
+
+        <div id="statusAlert" class="alert-box"></div>
+
+        <!-- Orders Table Card -->
+        <div class="table-card">
+            <div class="table-toolbar">
+                <div>
+                    <h2 class="card-title" style="margin-bottom: 0.2rem;">All Production Orders</h2>
+                    <p class="card-subtitle" style="margin-bottom: 0;">Live order status tracking aggregated from the MySQL orders database.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order #</th>
+                        <th>Customer Name</th>
+                        <th>Book Title</th>
+                        <th>Quantity</th>
+                        <th>Date Placed</th>
+                        <th>Current Status</th>
+                        <th>Update Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody">
+                    <tr>
+                        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                            Loading production orders from MySQL database...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- Order Details Modal -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalOrderNumber">Order Details</h3>
+                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            </div>
+            <div id="modalContent">
+                <!-- Dynamically populated by manager.js -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalOkBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <strong>Sri Ramakrishna Offset</strong> — Plant Operations Dashboard
+            </div>
+            <div>
+                Academic FSD Project &copy; 2026
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/manager.js"></script>
+</body>
+</html>

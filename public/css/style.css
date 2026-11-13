@@ -1,0 +1,930 @@
+/* ========================================================
+   Sri Ramakrishna Offset - Master Stylesheet (Desktop-First)
+   ======================================================== */
+
+:root {
+    --primary-color: #1e3a8a;       /* Deep Navy Printing Blue */
+    --primary-hover: #172554;
+    --secondary-color: #0284c7;     /* Sky Cyan */
+    --accent-color: #f59e0b;        /* Paper Gold */
+    --text-main: #1e293b;           /* Slate 800 */
+    --text-muted: #64748b;          /* Slate 500 */
+    --bg-light: #f8fafc;           /* Light Canvas */
+    --bg-card: #ffffff;            /* White Card */
+    --border-color: #e2e8f0;        /* Subtle Border */
+    --success-color: #15803d;       /* Green */
+    --danger-color: #b91c1c;        /* Red */
+    --font-stack: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    min-width: 320px;
+}
+
+/* ----------------- Top Navigation Bar ----------------- */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.brand-logo-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.brand-title {
+    font-size: 1.22rem;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+}
+
+.brand-subtitle {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: block;
+    margin-top: -2px;
+    white-space: nowrap;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.88rem;
+    padding: 0.35rem 0.45rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+/* ----------------- Layout Containers ----------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* ----------------- Notice Banner ----------------- */
+.demo-banner {
+    background-color: #fef3c7;
+    border-left: 4px solid var(--accent-color);
+    color: #92400e;
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ----------------- Hero / Welcome Banner ----------------- */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 3rem 2.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-tag {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* ----------------- Section Headers ----------------- */
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ----------------- Step Flow / Manufacturing Process ----------------- */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.process-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.process-step-num {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-color);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.85rem;
+    font-size: 0.9rem;
+}
+
+.process-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-main);
+}
+
+.process-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* ----------------- Services Grid ----------------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-top: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.service-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ----------------- Two-Column Form & Tracking Layout ----------------- */
+.interaction-split {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.card-title {
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ----------------- Forms & Inputs ----------------- */
+.form-group {
+    margin-bottom: 1.15rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+}
+
+.required {
+    color: var(--danger-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* ----------------- Feedback Messages & Alerts ----------------- */
+.alert-box {
+    padding: 0.9rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    display: none;
+}
+
+.alert-box.show {
+    display: block;
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+    color: #166534;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+}
+
+.alert-info {
+    background-color: #e0f2fe;
+    border: 1px solid #7dd3fc;
+    color: #0369a1;
+}
+
+/* ----------------- Tracking Result Card ----------------- */
+.tracking-result-box {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: #f8fafc;
+    display: none;
+}
+
+.tracking-result-box.show {
+    display: block;
+}
+
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.tracking-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    margin-bottom: 0.45rem;
+}
+
+.tracking-label {
+    color: var(--text-muted);
+}
+
+.tracking-val {
+    font-weight: 600;
+}
+
+/* ----------------- Status Badges ----------------- */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.badge-order-received {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.badge-printing {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.badge-book-finishing {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+}
+
+.badge-ready-for-delivery {
+    background-color: #ccfbf1;
+    color: #0f766e;
+}
+
+.badge-completed {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge-rejected {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* ----------------- Metric Summary Cards (Admin) ----------------- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.stat-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.icon-blue { background: #e0f2fe; color: #0284c7; }
+.icon-amber { background: #fef3c7; color: #d97706; }
+.icon-green { background: #dcfce7; color: #16a34a; }
+
+.stat-info h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-info .stat-number {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+/* ----------------- Data Tables ----------------- */
+.table-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    overflow-x: auto;
+}
+
+.table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    vertical-align: middle;
+}
+
+tr:hover td {
+    background-color: #f1f5f9;
+}
+
+/* ----------------- Modal Popup ----------------- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-box {
+    background: #ffffff;
+    width: 550px;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.modal-footer {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+/* ----------------- Footer ----------------- */
+footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ----------------- Navigation Login Buttons ----------------- */
+.nav-auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.nav-btn-outline,
+.nav-btn-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    font-size: 0.86rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    height: 36px !important;
+    padding: 0 0.95rem !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+}
+
+.nav-btn-outline {
+    border: 1.5px solid var(--primary-color) !important;
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+    transition: all 0.2s ease !important;
+}
+
+.nav-btn-outline:hover {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+.nav-btn-primary {
+    border: 1.5px solid var(--primary-color) !important;
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.18) !important;
+    transition: all 0.2s ease !important;
+}
+
+.nav-btn-primary:hover {
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.28) !important;
+}
+
+.nav-user-pill {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-logout {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-logout:hover {
+    background-color: #fca5a5;
+    color: #7f1d1d;
+}
+
+/* ----------------- Homepage Staff & Management Portals Section ----------------- */
+.management-access-section {
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #ffffff, #f8fafc);
+}
+
+.portals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+.portal-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.portal-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.85rem;
+}
+
+.portal-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.portal-card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* ----------------- Separate Login Pages Styling ----------------- */
+.login-wrapper {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.login-icon-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+.login-badge-admin {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.login-badge-manager {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.login-header h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.35rem;
+}
+
+.login-header p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.login-footer-links {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.login-footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------- Responsive Navigation Adjustments ----------------- */
+@media (max-width: 1220px) {
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+    .nav-wrapper {
+        gap: 0.85rem;
+    }
+    .nav-menu {
+        gap: 0.5rem;
+    }
+    .nav-link {
+        font-size: 0.84rem;
+        padding: 0.3rem 0.35rem;
+    }
+    .nav-btn-outline,
+    .nav-btn-primary {
+        font-size: 0.82rem !important;
+        padding: 0 0.75rem !important;
+        height: 33px !important;
+    }
+}
+
+@media (max-width: 1040px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.85rem 1rem;
+    }
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem 0.85rem;
+    }
+    .nav-auth-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-subtitle {
+        display: none;
+    }
+    .brand-title {
+        font-size: 1.1rem;
+    }
+    .nav-menu {
+        gap: 0.35rem 0.6rem;
+    }
+}
+
+
